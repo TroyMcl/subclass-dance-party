@@ -28,6 +28,11 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    var smoothDancer = new dancerMakerFunction(
+      alert('Smooth Dancer')
+    );
+    $('body').append(smoothDancer.$node);
   });
 });
 
