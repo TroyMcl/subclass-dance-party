@@ -21,4 +21,4 @@ makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 makeBlinkyDancer.prototype.step = function () {
   this.oldStep;
   this.$node.toggle();
-}
+};
