@@ -8,4 +8,11 @@ makeSmoothDancer.prototype = Object.create(makeDancer.prototype);
 makeSmoothDancer.prototype.constructor = makeSmoothDancer;
 makeSmoothDancer.prototype.slide = function () {
   // this.$node.animate({backgroundPositionX:'+=300px' });
+  this.$node.css({
+    'animation-name': 'slide',
+    'animation-duration': '7s',
+    'animation-iteration-count': 'infinite',
+    'animation-direction': 'alternate',
+    'position': 'absolute'
+  });
 };

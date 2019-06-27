@@ -25,3 +25,16 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+@keyframes slide {
+  from {
+      right: 95%;
+  }
+  to {
+      left: 95%;
+  }
+}
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+  }
+}
