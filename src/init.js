@@ -35,7 +35,7 @@ $(document).ready(function() {
   $('.lineUp').on('click', function(event) {
     var applyLineUp = function(array) {
       for (var i = 0; i < array.length; i++) {
-        makeDancer.prototype.lineUp(array[i])
+        makeDancer.prototype.lineUp(array[i]);
       }
     };
     applyLineUp(window.dancers);

@@ -17,5 +17,5 @@ makeSmoothDancer.prototype.slide = function () {
 };
 
 makeSmoothDancer.prototype.lineUp = function() {
-  this.$node.css({'border-color' : 'blue'})
+  this.$node.css({'border-color' : 'blue'});
 };
