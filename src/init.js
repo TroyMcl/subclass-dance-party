@@ -30,5 +30,10 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+
+  $('.lineUp').on('click', function(event) {
+    alert('test')
+  });
+
 });
 
