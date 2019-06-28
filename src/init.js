@@ -37,7 +37,7 @@ $(document).ready(function() {
       for (var i = 0; i < array.length; i++) {
         makeDancer.prototype.lineUp(array[i])
       }
-    }
+    };
     applyLineUp(window.dancers);
   });
 

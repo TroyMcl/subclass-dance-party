@@ -7,7 +7,6 @@ var makeSmoothDancer = function (top, left, timeBetweenSteps) {
 makeSmoothDancer.prototype = Object.create(makeDancer.prototype);
 makeSmoothDancer.prototype.constructor = makeSmoothDancer;
 makeSmoothDancer.prototype.slide = function () {
-  // this.$node.animate({backgroundPositionX:'+=300px' });
   this.$node.css({
     'animation-name': 'slide',
     'animation-duration': '7s',
@@ -15,4 +14,8 @@ makeSmoothDancer.prototype.slide = function () {
     'animation-direction': 'alternate',
     'position': 'absolute'
   });
+};
+
+makeSmoothDancer.prototype.lineUp = function() {
+  this.$node.css({'border-color' : 'blue'})
 };

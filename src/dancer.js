@@ -26,13 +26,21 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.lineUp = function() {
-    $('.dancer').animate({
-      left: 280
-    }, 'slow');
-}
+makeDancer.prototype.lineUp = function(node) {
+  $('.dancer').css({
+    'animation-name': 'none',
+    'animation-duration': 'none',
+    'animation-iteration-count': 'none',
+    'animation-direction': 'none',
+    'position': 'none'
+  });
+  $('.dancer').animate({
+    left: 280
+  }, 'slow');
+  //this.$node.css({'border-color':'blue'})
+};
 
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
-  //this.setPosition(top, left);
+// now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
+// this one sets the position to some random default point within the body
+//this.setPosition(top, left);
 
