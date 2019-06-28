@@ -19,7 +19,14 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 makeBlinkyDancer.prototype.step = function () {
+  function randomColors() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+  }
+
   var oldStep = makeDancer.prototype.step.call(this);
   oldStep;
-  this.$node.toggle();
+  this.$node.toggle().css({'border-color': randomColors});
 };
