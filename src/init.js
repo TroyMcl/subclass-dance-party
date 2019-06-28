@@ -29,11 +29,16 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer.$node);
   });
 
   $('.lineUp').on('click', function(event) {
-    alert('test')
+    var applyLineUp = function(array) {
+      for (var i = 0; i < array.length; i++) {
+        makeDancer.prototype.lineUp(array[i])
+      }
+    }
+    applyLineUp(window.dancers);
   });
 
 });
-
