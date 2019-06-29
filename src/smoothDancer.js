@@ -1,5 +1,6 @@
 var makeSmoothDancer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<img class="dancer" src="https://media0.giphy.com/media/2Wf4qYgMmou4zjg9qX/giphy.gif?cid=790b76115d177fa04670357a6b0124f5&rid=giphy.gif">');
   this.setPosition(top, left);
   this.slide();
 };
@@ -12,7 +13,12 @@ makeSmoothDancer.prototype.slide = function () {
     'animation-duration': '7s',
     'animation-iteration-count': 'infinite',
     'animation-direction': 'alternate',
-    'position': 'absolute'
+    'position': 'absolute',
+    'border': 'none',
+    'border-radius': 'none',
+    'position': 'none',
+    'transform': 'scale(.3)',
+    'padding' : '0px'
   });
 };
 

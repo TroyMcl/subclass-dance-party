@@ -36,7 +36,7 @@ $(document).ready(function() {
     });
 
     dancer.$node.mouseleave(function() {
-      dancer.$node.css({'border-radius': '10px'});
+      dancer.$node.css({'border-radius': '20px'});
     });
 
     dancer.$node.on('click', function(e) {
