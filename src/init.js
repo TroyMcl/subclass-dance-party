@@ -30,6 +30,15 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer.$node);
+
+    dancer.$node.mouseover(function() {
+      dancer.$node.css({'border-radius': '0px'});
+    });
+
+    dancer.$node.mouseleave(function() {
+      dancer.$node.css({'border-radius': '10px'});
+    });
+
   });
 
   $('.lineUp').on('click', function(event) {
