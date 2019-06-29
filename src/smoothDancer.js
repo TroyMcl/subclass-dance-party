@@ -17,8 +17,9 @@ makeSmoothDancer.prototype.slide = function () {
     'border': 'none',
     'border-radius': 'none',
     'position': 'none',
-    'transform': 'scale(.3)',
-    'padding' : '0px'
+    //'transform': 'scale(.3)',
+    'width': '200px',
+    'height': 'auto'
   });
 };
 
