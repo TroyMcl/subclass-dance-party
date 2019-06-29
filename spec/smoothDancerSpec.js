@@ -18,6 +18,12 @@ describe('smoothDancer', function() {
     expect(smoothDancer.$node.css.called).to.be.true;
   });
 
+  it('should have lineUp method', function() {
+    sinon.spy(smoothDancer.$node, 'animate');
+    smoothDancer.lineUp();
+    expect(smoothDancer.$node.animate).to.exist;
+  });
+
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(smoothDancer, 'step');
