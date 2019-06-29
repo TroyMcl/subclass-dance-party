@@ -39,6 +39,10 @@ $(document).ready(function() {
       dancer.$node.css({'border-radius': '10px'});
     });
 
+    dancer.$node.on('click', function(e) {
+      console.log(e);
+    });
+
   });
 
   $('.lineUp').on('click', function(event) {
