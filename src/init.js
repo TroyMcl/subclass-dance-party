@@ -40,7 +40,9 @@ $(document).ready(function() {
     });
 
     dancer.$node.on('click', function(e) {
-      console.log(e);
+      console.log(e)
+      //console.log(e.target.x)
+      makeDancer.prototype.findNeighbor(e)
     });
 
   });
