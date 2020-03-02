@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.dancers = [];
 
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function (event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -31,24 +31,24 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     window.dancers.push(dancer.$node);
 
-    dancer.$node.mouseover(function() {
-      dancer.$node.css({'border-radius': '0px'});
+    dancer.$node.mouseover(function () {
+      dancer.$node.css({ 'border-radius': '0px' });
     });
 
-    dancer.$node.mouseleave(function() {
-      dancer.$node.css({'border-radius': '20px'});
+    dancer.$node.mouseleave(function () {
+      dancer.$node.css({ 'border-radius': '20px' });
     });
 
-    dancer.$node.on('click', function(e) {
-      console.log(e)
+    dancer.$node.on('click', function (e) {
+      console.log(e);
       //console.log(e.target.x)
-      makeDancer.prototype.findNeighbor(e)
+      makeDancer.prototype.findNeighbor(e);
     });
 
   });
 
-  $('.lineUp').on('click', function(event) {
-    var applyLineUp = function(array) {
+  $('.lineUp').on('click', function (event) {
+    var applyLineUp = function (array) {
       for (var i = 0; i < array.length; i++) {
         makeDancer.prototype.lineUp(array[i]);
       }

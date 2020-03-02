@@ -41,14 +41,14 @@ makeDancer.prototype.lineUp = function(node) {
 };
 
 makeDancer.prototype.findNeighbor = function(node) {
-  var nodeArray = window.dancers
+  var nodeArray = window.dancers;
   var closestNode = nodeArray[0];
-  var nodeDistanceMeasurement = 10000
+  var nodeDistanceMeasurement = 10000;
   for (var i = 0; i < nodeArray.length; i++) {
-    var distance = makeDancer.prototype.getDistance(node.target.x, node.target.y, nodeArray[i][0].x,nodeArray[i][0].y );
+    var distance = makeDancer.prototype.getDistance(node.target.x, node.target.y, nodeArray[i][0].x, nodeArray[i][0].y );
     if(distance < nodeDistanceMeasurement && distance > 0) {
       nodeDistanceMeasurement = distance;
-      closestNode = nodeArray[i]
+      closestNode = nodeArray[i];
     }
     // console.log('x cordinate', nodeArray[i][0].x)
     // console.log('y cordinate', nodeArray[i][0].y)
@@ -63,7 +63,7 @@ makeDancer.prototype.findNeighbor = function(node) {
     'animation-timing-function': 'linear'
   });
 
-}
+};
 
 makeDancer.prototype.getDistance = function (x1, y1, x2, y2) {
   var xs = x2 - x1;
@@ -72,8 +72,8 @@ makeDancer.prototype.getDistance = function (x1, y1, x2, y2) {
   xs *= xs;
   ys *= ys;
 
-  return Math.sqrt(xs+ys)
-}
+  return Math.sqrt(xs+ys);
+};
 
 // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
 // this one sets the position to some random default point within the body
